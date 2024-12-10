@@ -1,24 +1,28 @@
 \section{Institution and field of research}
 
-\subsection{NWO domain (Choose \ul{one})}\label{sec:domain}
-
-\checkbox Applied and Engineering Sciences (AES/TTW)\\ 
-\checkbox Social Sciences and Humanities (SSH/SGW)\\
-\checkedbox Science (ENW)
-
 \subsection{Title of the research proposal}\label{sec:title}
 
-\subsection{Summary}\label{sec:summary}
+\subsection{Scientific summary of research proposal}\label{sec:summary}
 
-(Max. 300 words. \textbf{Identical to the abstract in ISAAC})\\
+\countem
+(Max. 300 words. \textbf{Identical to the abstract in ISAAC})
+\endcountem
 
-Word count \ref{sec:summary}:
+Word count \ref{sec:summary}: \thewordcount{}
 
 \subsection{Keywords}\label{sec:keywords}
 
-(Max. five keywords)
+(Max. five keywords,  \textbf{Identical to the abstract in ISAAC})
+
+\subsection{NWO domain (Choose \ul{one from the dropdown menu})}\label{sec:domain}
+
+Applied and Engineering Sciences (AES/TTW)
+%Social Sciences and Humanities (SSH/SGW)\\
+%Science (ENW)
 
 \subsection{Main field of research}\label{sec:mainfield}
+
+%Indicate the main field of research and (if applicable) other fields of research, in order of relevance, using the codes and names from the dropdown menu (For more information see Notes 1b. The list of codes can also be found on \url{www.nwo.nl/researchfields})
 
 \begin{center}
     \renewcommand{\arraystretch}{1.6}
@@ -47,20 +51,20 @@ Word count \ref{sec:summary}:
 \begin{center}
     \renewcommand{\arraystretch}{1.2}
     \normalsize
-    \begin{tabular}{m{140mm}}
+    \begin{tabular}{m{155mm}}
         NL\\
     \end{tabular}
-    \begin{tabular}{|m{140mm}|}
-        \hline
-        \rowcolor{nwoshade} \textbf{\nth{Projecttitel}}\\
-        \hline
-        \rowcolor{nwoshade} \textit{\nth{Academische titel(s), Initialen, Achternaam, Beoogd gastinstituut}} \\
-        \hline
-        Publiekssamenvatting \\
-        \\
-        \hline
-        \rowcolor{nwoshade} \nth{Wordcount}: \\
-        \hline
+    \begin{tabular}{|n{20mm}|p{135mm}|}
+    	\hline
+    	\nth{Projecttitel:} & \\
+    	\hline
+    	\nth{Publieks-samenvatting:} & 
+    	\countem     	
+    	Add text here.     	
+    	\endcountem \\
+		\hline
+		\nth{Word count:} & \thewordcount{} \\
+    	\hline
     \end{tabular}
 \end{center}
 
@@ -72,18 +76,32 @@ Word count \ref{sec:summary}:
     \begin{tabular}{m{140mm}}
         ENG\\
     \end{tabular}
-    \begin{tabular}{|m{140mm}|}
-        \hline
-        \rowcolor{nwoshade} \textbf{\nth{Project title}}\\
-        \hline
-        \rowcolor{nwoshade} \textit{\nth{Academic title(s), Initials, Surname, Prospective host institute}} \\
-        \hline
-        Public summary \\
-        \\
-        \hline
-        \rowcolor{nwoshade} \nth{Wordcount}: \\
-        \hline
+     \begin{tabular}{|n{20mm}|p{135mm}|}
+    	\hline
+    	\nth{Project title:} & \\
+    	\hline
+    	\nth{Public \hbox{summary}:} & 
+    	\countem     	
+    	Add text here.     	
+    	\endcountem \\
+    	\hline
+    	\nth{Word count:} & \thewordcount{} \\
+    	\hline
     \end{tabular}
+\end{center}
+
+\subsection{Prospective host institution}\label{sec:host}
+
+\begin{center}
+	\renewcommand{\arraystretch}{1.6}
+	\normalsize
+	\begin{tabular}{|n{35mm}|p{120mm}|}
+		\hline
+		\nth{Host institution:} & \\
+		\hline
+		\nth{Research group:} & \\
+		\hline
+	\end{tabular}
 \end{center}
 
 %%% Local Variables: 
