@@ -119,7 +119,7 @@ BoldItalicFont=Carlito-BoldItalic.ttf,
 %========================page layout==============================
 
 % Use this to print on A4:
-\usepackage[a4paper, top=2.5cm, bottom=1.6cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[a4paper, top=2.5cm, bottom=1.6cm, left=2.4cm, right=2.4cm]{geometry}
 \setlength{\textheight}{25.4cm}
 %\setlength{\headheight}{51pt}
 \linespread{1.0}  % Distance between lines - default 1.0

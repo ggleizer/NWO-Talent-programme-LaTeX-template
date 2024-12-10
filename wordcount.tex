@@ -1,0 +1,39 @@
+%https://tex.stackexchange.com/questions/44618/dynamically-count-and-return-number-of-words-in-a-section
+
+\newcounter{wordcount}
+\newcounter{lettercount}
+\newcounter{wordlimit}
+\newif\ifinword
+% USER PARAMETERS
+\newif\ifrunningcount
+\newif\ifsummarycount
+\def\limitcolor{red}
+\setcounter{wordlimit}{0}
+%%
+\makeatletter
+% \tc@defx is like \def, but expands the replacement text once prior to assignment
+\newcommand\addtomacro[2]{\tc@defx#1{#1#2}}
+\newcommand\changecolor[1]{\tctestifx{.#1}{}{\addcytoks{\color{#1}{}}%
+		\tc@defx\currentcolor{#1}}}
+\makeatother
+\newcommand\dumpword{%
+	\addcytoks[1]{\accumword}%
+	\ifinword\stepcounter{wordcount}
+	\ifrunningcount\addcytoks[x]{$^{\thewordcount,\thelettercount}$}\fi
+	\ifnum\thewordcount=\value{wordlimit}\relax\changecolor{\limitcolor}\fi
+	\fi%
+	\inwordfalse
+	\def\accumword{}}
+\newcommand\addletter[1]{%
+	\tctestifcatnx A#1{\stepcounter{lettercount}\inwordtrue}{\dumpword}%
+	\addtomacro\accumword{#1}}
+\xtokcycleenvironment\countem
+{\addletter{##1}}
+{\dumpword\groupedcytoks{\processtoks{##1}\dumpword\expandafter}\expandafter
+	\changecolor\expandafter{\currentcolor}}
+{\dumpword\addcytoks{##1}}
+{\dumpword\addcytoks{##1}}
+{\stripgroupingtrue\def\accumword{}\def\currentcolor{.}
+	\setcounter{wordcount}{0}\setcounter{lettercount}{0}}
+{\dumpword\ifsummarycount\tcafterenv{%
+		\par(Wordcount=\thewordcount, Lettercount=\thelettercount)}\fi}
