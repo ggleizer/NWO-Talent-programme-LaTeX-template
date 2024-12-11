@@ -1,6 +1,10 @@
 \section{Research proposal}\label{sec:proposal}
+\newcounter{respage}
+\newcounter{imppage}
 
 \subsection{Description of the proposed research (max.~2000 words on 5 pages)}\label{sec:research}
+\setcounter{respage}{-\value{page}}
+\stepcounter{respage}
 \countem
 
 \subsubsection{Overall aim and key objective}\label{sec:aim}
@@ -16,6 +20,8 @@ Text \cite{clarke2018}.
 
 \subsubsection{Research plan}\label{sec:plan}
 
+
+
 \subsubsection{Alignment between research proposal and expertise of the applicant}
 
 \subsubsection{Motivation for choice of institute}\label{sec:institute}
@@ -23,14 +29,18 @@ Text \cite{clarke2018}.
 
 \endcountem
 \addtocounter{wordcount}{-30}  % Subtract headers
+\addtocounter{respage}{\value{page}}
+
 \vspace{2em}
 Word count 2a:     \thewordcount{}\\
-Page count 2a:     \\
+Page count 2a:     \arabic{respage}\\
 
 %---------------------------------------------------------
 
 \newpage
 \subsection{Scientific and/or societal impact of the proposed project (max.~750 words on 2 pages)}\label{sec:KU}
+\setcounter{imppage}{-\value{page}}
+\stepcounter{imppage}
 % Describe the proposed impact of the research within the stated maximum number of words  (max. 1,000 words, please see the Explanatory Notes for further explanations).
 
 % Choose one of these:
@@ -49,10 +59,11 @@ Primary focus on scientific impact
 % Indicate the number of words used. Words in references, footnotes, figures, figure captions and tables should be included in the count.
 
 \endcountem
+\addtocounter{imppage}{\value{page}}
 
 \vspace{2em}
 Word count 2b:     \thewordcount{}\\
-Page count 2b:     \\
+Page count 2b:     \arabic{imppage}\\
 
 %---------------------------------------------------------
 
