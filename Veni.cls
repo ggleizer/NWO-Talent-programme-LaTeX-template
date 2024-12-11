@@ -82,6 +82,7 @@ BoldItalicFont=Carlito-BoldItalic.ttf,
             \node[anchor=north east,inner sep=0pt,xshift=-2.5cm,yshift=-2.6cm] at (current page.north east) {\includegraphics[width=2.09cm,height=3.38cm]{NWO.jpg}};
         \end{tikzpicture}
     }
+    \thispagestyle{empty}
 }
 \renewcommand{\title}[1]{\def \thetitle {#1}}
 \newcommand{\subtitle}[1]{\def \thesubtitle {#1}}
@@ -270,6 +271,7 @@ natbib=true]{biblatex}
 %-----------------add shaded cells to tables------------------------
 \usepackage{colortbl}
 \newcolumntype{n}{>{\columncolor{nwoshade}}p}
+\newcolumntype{k}{>{\columncolor{nwoshade}}m}
 \newcolumntype{w}{>{\centering\let\newline\\\arraybackslash\hspace{0pt}\columncolor{nwoshade}}p}
 \newcolumntype{o}{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p}
 \newcolumntype{q}{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p}
@@ -303,12 +305,13 @@ natbib=true]{biblatex}
 \usepackage{lastpage}
 
 \pagestyle{fancy}
-\lhead{}
-\rhead{}
+\fancyheadinit{\color{nwotext!50!white} \bfseries}
+\lhead{Grant application Veni full proposal form 2024}
+\rhead{p~\thepage}
 \cfoot{\footnotesize\thepage}
 
 \renewcommand{\footnoterule}{\vfill}
-\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\headrulewidth}{0pt}
 
 %========================comments=====================
 \usepackage{comment}
